@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Название статьи — Первый полёт</title>
+<style>
+  :root{--black:#1A1A1A;--white:#FFF;--green:#00E676;--gray:#F4F4F4;--gray-dark:#666;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter','Montserrat',Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.7;}
+  header{border-bottom:2px solid var(--black);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--white);z-index:10;gap:20px;}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:1px;text-decoration:none;color:var(--black);}
+  .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block;}
+  .brand-logo{height:40px;width:auto;display:block;}
+  nav a{color:var(--black);text-decoration:none;margin-left:24px;font-size:14px;font-weight:600;}
+  nav a:hover{color:var(--green);}
+  .back{display:inline-block;margin:30px 40px 0;color:var(--gray-dark);text-decoration:none;font-size:14px;font-weight:600;}
+  .back:hover{color:var(--green);}
+  article{max-width:760px;margin:20px auto 60px;padding:0 40px;}
+  .tag{display:inline-block;font-size:12px;background:var(--gray);padding:4px 10px;border-radius:12px;color:var(--gray-dark);font-weight:600;margin-bottom:16px;}
+  article h1{font-size:40px;line-height:1.15;font-weight:800;margin-bottom:20px;}
+  article h1::after{content:"";display:block;width:60px;height:4px;background:var(--green);margin-top:16px;}
+  article h2{font-size:26px;font-weight:800;margin:36px 0 12px;}
+  article h3{font-size:20px;font-weight:700;margin:24px 0 10px;}
+  article p{margin-bottom:14px;font-size:17px;}
+  article ul,article ol{margin:0 0 16px 24px;}
+  article li{margin-bottom:8px;font-size:17px;}
+  article code{background:var(--gray);padding:2px 6px;border-radius:4px;font-size:15px;}
+  article blockquote{border-left:4px solid var(--green);padding:10px 18px;background:var(--gray);margin:16px 0;font-style:italic;}
+  .note{border:2px solid var(--black);padding:16px 20px;border-radius:6px;margin:20px 0;background:var(--white);}
+  .note strong{color:var(--green);}
+  footer{border-top:2px solid var(--black);padding:40px;text-align:center;font-size:14px;color:var(--gray-dark);}
+  footer .logo{justify-content:center;margin-bottom:12px;}
+  .footer-logo{height:32px;width:auto;margin:0 auto 10px;display:block;}
+  @media(max-width:600px){article h1{font-size:28px;}header{padding:16px 20px;flex-direction:column;gap:12px;}nav a{margin:0 10px;}article{padding:0 20px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.svg" alt="Первый полёт" class="brand-logo" onerror="this.style.display='none'">
+    <span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ
+  </a>
+  <nav><a href="index.html">Главная</a><a href="index.html#basics">Основы</a><a href="index.html#practice">Практика</a></nav>
+</header>
+
+<a href="index.html" class="back">← Назад на главную</a>
+
+<article>
+  <span class="tag">Основы</span>
+  <h1>Название статьи</h1>
+
+  <p>Вводный абзац: о чём статья и зачем её читать.</p>
+
+  <h2>Раздел 1</h2>
+  <p>Текст раздела. Можно использовать <strong>жирный</strong>, <em>курсив</em>, <code>код</code>.</p>
+  <ul>
+    <li>Пункт списка</li>
+    <li>Пункт списка</li>
+  </ul>
+
+  <h2>Раздел 2</h2>
+  <p>Текст.</p>
+  <div class="note"><strong>Важно:</strong> текст предупреждения или ключевого момента.</div>
+
+  <blockquote>Цитата или важная мысль.</blockquote>
+
+  <h2>Итог</h2>
+  <p>Короткое резюме: что запомнить.</p>
+</article>
+
+<footer>
+  <div class="logo"><span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ</div>
+  <img src="logo-footer.svg" alt="" class="footer-logo" onerror="this.style.display='none'">
+  <p>База знаний по БПЛА · 2026</p>
+</footer>
+
+</body>
+</html>
