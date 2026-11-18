@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Регламент соревнования — Первый полёт</title>
+<style>
+  :root{--black:#1A1A1A;--white:#FFF;--green:#00E676;--gray:#F4F4F4;--gray-dark:#666;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter','Montserrat',Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.7;}
+  header{border-bottom:2px solid var(--black);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--white);z-index:10;gap:20px;}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:1px;text-decoration:none;color:var(--black);}
+  .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block;}
+  .brand-logo{height:40px;width:auto;display:block;}
+  nav a{color:var(--black);text-decoration:none;margin-left:24px;font-size:14px;font-weight:600;}
+  nav a:hover{color:var(--green);}
+  .back{display:inline-block;margin:30px 40px 0;color:var(--gray-dark);text-decoration:none;font-size:14px;font-weight:600;}
+  .back:hover{color:var(--green);}
+  article{max-width:800px;margin:20px auto 60px;padding:0 40px;}
+  .tag{display:inline-block;font-size:12px;background:var(--black);color:var(--green);padding:4px 12px;border-radius:12px;font-weight:700;margin-bottom:16px;}
+  article h1{font-size:40px;line-height:1.15;font-weight:800;margin-bottom:20px;}
+  article h1::after{content:"";display:block;width:60px;height:4px;background:var(--green);margin-top:16px;}
+  article h2{font-size:26px;font-weight:800;margin:36px 0 12px;}
+  article h3{font-size:20px;font-weight:700;margin:24px 0 10px;}
+  article p{margin-bottom:14px;font-size:17px;}
+  article ul,article ol{margin:0 0 16px 24px;}
+  article li{margin-bottom:8px;font-size:17px;}
+  article code{background:var(--gray);padding:2px 6px;border-radius:4px;font-size:15px;}
+  article blockquote{border-left:4px solid var(--green);padding:10px 18px;background:var(--gray);margin:16px 0;font-style:italic;}
+  .note{border:2px solid var(--black);padding:16px 20px;border-radius:6px;margin:20px 0;background:var(--white);}
+  .note strong{color:var(--green);}
+  table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+  th,td{border:1px solid #DDD;padding:10px 12px;text-align:left;}
+  th{background:var(--black);color:var(--white);font-weight:700;}
+  tr:nth-child(even){background:var(--gray);}
+  .btn{display:inline-block;background:var(--black);color:var(--white);padding:14px 28px;text-decoration:none;font-weight:700;border-radius:4px;border:2px solid var(--black);transition:all .2s;margin-top:10px;}
+  .btn:hover{background:var(--green);color:var(--black);border-color:var(--green);}
+  .btn-green{background:var(--green);color:var(--black);border-color:var(--green);}
+  .btn-green:hover{background:var(--black);color:var(--white);border-color:var(--black);}
+  .register{background:var(--black);color:var(--white);padding:28px;border-radius:8px;margin:24px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;}
+  .register h3{font-size:20px;font-weight:800;margin:0 0 4px;color:var(--white);}
+  .register p{margin:0;color:#CCC;font-size:15px;}
+  .register .btn-green{margin-top:0;}
+  footer{border-top:2px solid var(--black);padding:40px;text-align:center;font-size:14px;color:var(--gray-dark);}
+  footer .logo{justify-content:center;margin-bottom:12px;}
+  .footer-logo{height:32px;width:auto;margin:0 auto 10px;display:block;}
+  @media(max-width:600px){article h1{font-size:28px;}header{padding:16px 20px;flex-direction:column;gap:12px;}nav a{margin:0 10px;}article{padding:0 20px;}table{font-size:13px;}th,td{padding:6px 8px;}.register{padding:20px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Первый полёт" class="brand-logo" onerror="this.style.display='none'">
+    <span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ
+  </a>
+  <nav><a href="index.html">Главная</a><a href="index.html#articles">Статьи</a><a href="contest.html">Соревнование</a></nav>
+</header>
+
+<a href="contest.html" class="back">← К соревнованию</a>
+
+<article>
+  <span class="tag">РЕГЛАМЕНТ</span>
+  <h1>Как проходит соревнование и как оценивают</h1>
+
+  <p>Этот регламент — для участников и экспертов. Здесь всё, что нужно знать до регистрации: этапы, формат, критерии, состав экспертов и порядок апелляции.</p>
+
+  <div class="register">
+    <div>
+      <h3>Готовы участвовать?</h3>
+      <p>Регистрация открыта до 30 ноября.</p>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx-p9Al-r-xyfk-CNClhVg_i23q6ph8-rVZd76jj0jbfrIQw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-green">Зарегистрироваться →</a>
+  </div>
+
+  <h2>1. Кто участвует</h2>
+  <ul>
+    <li>Обучающиеся организации «Первый полёт» и кружка БАС.</li>
+    <li>Индивидуально или командой (2–3 человека).</li>
+    <li>Участие добровольное. Заявка — через форму регистрации.</li>
+  </ul>
+
+  <h2>2. Этапы соревнования</h2>
+  <table>
+    <tr><th>Этап</th><th>Что происходит</th><th>Срок</th></tr>
+    <tr><td>1. Регистрация</td><td>Заполнение формы, выбор задачи</td><td>до 30 ноября</td></tr>
+    <tr><td>2. Разработка</td><td>Участники делают 3D-модель приспособления для мягкой посадки дрона</td><td>ноябрь</td></tr>
+    <tr><td>3. Сдача работы</td><td>Модель (.STL/.OBJ/.STEP) + описание на 1 страницу</td><td>до 30 ноября</td></tr>
+    <tr><td>4. Защита</td><td>3–5 минут на участника/команду: идея, решение, демонстрация</td><td>декабрь</td></tr>
+    <tr><td>5. Результаты</td><td>Объявление победителей, награждение</td><td>декабрь</td></tr>
+  </table>
+
+  <h2>3. Что сдавать</h2>
+  <ul>
+    <li><strong>Файл модели</strong> — .STL / .OBJ / .STEP (в зависимости от редактора).</li>
+    <li><strong>Описание</strong> — 1 страница: идея, принцип амортизации, предполагаемый материал, как проверить.</li>
+    <li><strong>Защита</strong> — 3–5 минут: что сделали, почему так, как работает.</li>
+  </ul>
+  <div class="note"><strong>Важно:</strong> модель должна быть оригинальной. При использовании чужих элементов — указать источник.</div>
+
+  <h2>4. Как оценивают</h2>
+  <p>Оценка — по 100-балльной шкале, по пяти критериям:</p>
+  <table>
+    <tr><th>Критерий</th><th>Макс. балл</th><th>Что оценивается</th></tr>
+    <tr><td>Соответствие заданию</td><td>20</td><td>Решает ли модель задачу мягкой и удобной посадки</td></tr>
+    <tr><td>Инженерное решение</td><td>25</td><td>Продуманность, амортизация, устойчивость, центровка</td></tr>
+    <tr><td>Качество 3D-модели</td><td>20</td><td>Геометрия, целостность, технологичность</td></tr>
+    <tr><td>Применимость для БПЛА</td><td>15</td><td>Подходит для whoop-класса, реально напечатать</td></tr>
+    <tr><td>Защита проекта</td><td>20</td><td>Ясность, обоснование, ответы на вопросы</td></tr>
+    <tr><th>Итого</th><th>100</th><th></th></tr>
+  </table>
+
+  <h3>Перевод в оценку</h3>
+  <table>
+    <tr><th>Баллы</th><th>Оценка</th></tr>
+    <tr><td>90–100</td><td>Отлично (5)</td></tr>
+    <tr><td>75–89</td><td>Хорошо (4)</td></tr>
+    <tr><td>60–74</td><td>Удовлетворительно (3)</td></tr>
+    <tr><td>0–59</td><td>Не сдано (2)</td></tr>
+  </table>
+
+  <h2>5. Кто оценивает (эксперты)</h2>
+  <p>Оценивание производит <strong>экспертная комиссия</strong> в составе:</p>
+  <ul>
+    <li><strong>Специалист (организатор)</strong> — руководитель «Первого полёта», ведёт этапы и оценку.</li>
+    <li><strong>Консультант по 3D-моделированию</strong> (при наличии) — помогает участникам, но не влияет на оценку.</li>
+    <li><strong>Руководитель кружка БАС</strong> — согласует результаты, подписывает ведомость.</li>
+  </ul>
+  <div class="note"><strong>Прозрачность:</strong> критерии известны заранее, баллы фиксируются в ведомости, результат объявляется после защиты.</div>
+
+  <h2>6. Апелляция</h2>
+  <ul>
+    <li>Участник вправе подать апелляцию <strong>в день объявления результата</strong>.</li>
+    <li>Апелляция рассматривается комиссией в тот же день.</li>
+    <li>Решение оформляется апелляционным листом и прикладывается к ведомости.</li>
+    <li>Возможные решения: оставить балл, изменить балл, назначить повторную защиту.</li>
+  </ul>
+
+  <h2>7. Награждение</h2>
+  <ul>
+    <li>Все участники, сдавшие работу и прошедшие защиту, — <strong>сертификат</strong>.</li>
+    <li>Победители (1–3 места) — <strong>дипломы</strong> конкурса «Первый полёт».</li>
+    <li>Лучшие модели рекомендуются к <strong>печати и внедрению</strong> в кружке.</li>
+  </ul>
+
+  <h2>8. Частые вопросы</h2>
+  <h3>Можно ли участвовать командой?</h3>
+  <p>Да, 2–3 человека. Оценивается команда, вклад фиксируется по желанию.</p>
+  <h3>Обязательно ли печатать модель?</h3>
+  <p>Нет. 3D-печать — отдельный этап. В рамках соревнования оценивается модель и защита. Лучшие модели печатаются для кружка.</p>
+  <h3>Что если не успеваю до 30 ноября?</h3>
+  <p>Свяжитесь с руководителем «Первого полёта» заранее — возможность продления обсуждается индивидуально.</p>
+  <h3>Можно ли использовать готовые элементы?</h3>
+  <p>Да, но с указанием источника. Модель должна быть оригинальной.</p>
+
+  <div class="register">
+    <div>
+      <h3>Остались вопросы?</h3>
+      <p>Напишите руководителю «Первого полёта» — ответим.</p>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx-p9Al-r-xyfk-CNClhVg_i23q6ph8-rVZd76jj0jbfrIQw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-green">Зарегистрироваться →</a>
+  </div>
+
+  <a href="contest.html" class="btn">← К соревнованию</a>
+</article>
+
+<footer>
+  <div class="logo"><span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ</div>
+  <img src="logo.png" alt="" class="footer-logo" onerror="this.style.display='none'">
+  <p>База знаний по БПЛА · 2026</p>
+</footer>
+
+</body>
+</html>
