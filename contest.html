@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Соревнование «3D-моделирование и 3D-печать» — Первый полёт</title>
+<style>
+  :root{--black:#1A1A1A;--white:#FFF;--green:#00E676;--gray:#F4F4F4;--gray-dark:#666;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter','Montserrat',Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.7;}
+  header{border-bottom:2px solid var(--black);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--white);z-index:10;gap:20px;}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:1px;text-decoration:none;color:var(--black);}
+  .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block;}
+  .brand-logo{height:40px;width:auto;display:block;}
+  nav a{color:var(--black);text-decoration:none;margin-left:24px;font-size:14px;font-weight:600;}
+  nav a:hover{color:var(--green);}
+  .back{display:inline-block;margin:30px 40px 0;color:var(--gray-dark);text-decoration:none;font-size:14px;font-weight:600;}
+  .back:hover{color:var(--green);}
+  /* ОБЛОЖКА */
+  .cover{max-width:1100px;margin:0 auto;padding:0 40px;}
+  .cover-img{width:100%;height:320px;border:2px dashed #BBB;border-radius:8px;background:var(--gray);display:flex;align-items:center;justify-content:center;color:#999;font-size:14px;font-weight:600;overflow:hidden;margin-top:20px;}
+  .cover-img img{width:100%;height:100%;object-fit:cover;display:block;}
+  article{max-width:800px;margin:20px auto 60px;padding:0 40px;}
+  .tag{display:inline-block;font-size:12px;background:var(--black);color:var(--green);padding:4px 12px;border-radius:12px;font-weight:700;margin-bottom:16px;}
+  article h1{font-size:40px;line-height:1.15;font-weight:800;margin-bottom:20px;}
+  article h1::after{content:"";display:block;width:60px;height:4px;background:var(--green);margin-top:16px;}
+  article h2{font-size:26px;font-weight:800;margin:36px 0 12px;}
+  article h3{font-size:20px;font-weight:700;margin:24px 0 10px;}
+  article p{margin-bottom:14px;font-size:17px;}
+  article ul,article ol{margin:0 0 16px 24px;}
+  article li{margin-bottom:8px;font-size:17px;}
+  article code{background:var(--gray);padding:2px 6px;border-radius:4px;font-size:15px;}
+  article blockquote{border-left:4px solid var(--green);padding:10px 18px;background:var(--gray);margin:16px 0;font-style:italic;}
+  .note{border:2px solid var(--black);padding:16px 20px;border-radius:6px;margin:20px 0;background:var(--white);}
+  .note strong{color:var(--green);}
+  .dates{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0;}
+  .date-card{border:2px solid var(--black);padding:16px 20px;border-radius:6px;flex:1 1 180px;}
+  .date-card .label{font-size:12px;color:var(--gray-dark);font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+  .date-card .value{font-size:20px;font-weight:800;margin-top:4px;}
+  .date-card .value span{color:var(--green);}
+  table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+  th,td{border:1px solid #DDD;padding:10px 12px;text-align:left;}
+  th{background:var(--black);color:var(--white);font-weight:700;}
+  tr:nth-child(even){background:var(--gray);}
+  .btn{display:inline-block;background:var(--black);color:var(--white);padding:14px 28px;text-decoration:none;font-weight:700;border-radius:4px;border:2px solid var(--black);transition:all .2s;margin-top:10px;}
+  .btn:hover{background:var(--green);color:var(--black);border-color:var(--green);}
+  .btn-green{background:var(--green);color:var(--black);border-color:var(--green);}
+  .btn-green:hover{background:var(--black);color:var(--white);border-color:var(--black);}
+  .btn-outline{background:transparent;color:var(--black);}
+  .btn-outline:hover{background:var(--black);color:var(--white);}
+  .register{background:var(--black);color:var(--white);padding:28px;border-radius:8px;margin:24px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;}
+  .register h3{font-size:20px;font-weight:800;margin:0 0 4px;color:var(--white);}
+  .register p{margin:0;color:#CCC;font-size:15px;}
+  .register .btn-green{margin-top:0;}
+  /* НАГРАДЫ */
+  .awards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0;}
+  .award{border:2px solid var(--black);border-radius:8px;padding:16px;text-align:center;}
+  .award .preview{width:100%;height:220px;border:2px dashed #BBB;border-radius:6px;background:var(--gray);display:flex;align-items:center;justify-content:center;color:#999;font-size:13px;font-weight:600;margin-bottom:12px;overflow:hidden;}
+  .award .preview img{width:100%;height:100%;object-fit:contain;display:block;}
+  .award .title{font-weight:800;font-size:16px;}
+  .award .sub{font-size:13px;color:var(--gray-dark);margin-top:4px;}
+  footer{border-top:2px solid var(--black);padding:40px;text-align:center;font-size:14px;color:var(--gray-dark);}
+  footer .logo{justify-content:center;margin-bottom:12px;}
+  .footer-logo{height:32px;width:auto;margin:0 auto 10px;display:block;}
+  @media(max-width:600px){article h1{font-size:28px;}header{padding:16px 20px;flex-direction:column;gap:12px;}nav a{margin:0 10px;}article{padding:0 20px;}table{font-size:13px;}th,td{padding:6px 8px;}.register{padding:20px;}.awards{grid-template-columns:1fr;}.cover{padding:0 20px;}.cover-img{height:180px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Первый полёт" class="brand-logo" onerror="this.style.display='none'">
+    <span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ
+  </a>
+  <nav><a href="index.html">Главная</a><a href="index.html#articles">Статьи</a><a href="regulations.html">Регламент</a></nav>
+</header>
+
+<a href="index.html" class="back">← Назад на главную</a>
+
+
+
+<article>
+  <span class="tag">ДЕКАБРЬ 2026</span>
+  <h1>Соревнование «3D-моделирование и 3D-печать»</h1>
+
+  <p>Конкурс «Первый полёт» объявляет зимний модуль — <strong>инженерный вызов</strong>. Задача: разработать приспособление для <strong>мягкой и удобной посадки дрона</strong>. Лучшие модели будут напечатаны и использованы в кружке.</p>
+
+  <div class="dates">
+    <div class="date-card"><div class="label">Регистрация</div><div class="value">до <span>30 ноября</span></div></div>
+    <div class="date-card"><div class="label">Приём работ</div><div class="value">до <span>30 ноября</span></div></div>
+    <div class="date-card"><div class="label">Защита и результаты</div><div class="value"><span>декабрь</span></div></div>
+  </div>
+
+  <!-- БЛОК РЕГИСТРАЦИИ -->
+  <div class="register">
+    <div>
+      <h3>Регистрация участников</h3>
+      <p>Заполните форму до 30 ноября — это займёт 2 минуты.</p>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx-p9Al-r-xyfk-CNClhVg_i23q6ph8-rVZd76jj0jbfrIQw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-green">Зарегистрироваться →</a>
+  </div>
+
+  <h2>Задание</h2>
+  <p>Разработать 3D-модель приспособления для посадки дрона (посадочная платформа / амортизирующая опора / гаситель удара), применимого для микро-БПЛА класса whoop (Meteor 75 PRO, ~75 мм, ~30–40 г).</p>
+  <p>Приспособление должно обеспечивать:</p>
+  <ul>
+    <li><strong>мягкую посадку</strong> — амортизация, гашение удара;</li>
+    <li><strong>удобство</strong> — устойчивость, центровка, простота установки;</li>
+    <li><strong>применимость</strong> — реально напечатать и использовать.</li>
+  </ul>
+
+  <h2>Формат участия</h2>
+  <ul>
+    <li>Индивидуально или командой (2–3 человека).</li>
+    <li>3D-редактор — любой (Tinkercad, Fusion 360, Blender, КОМПАС).</li>
+    <li>Сдать: модель (.STL / .OBJ / .STEP) + описание на 1 страницу.</li>
+    <li>3D-печать — отдельный этап; лучшие модели печатаются для кружка.</li>
+  </ul>
+
+  <h2>Критерии оценивания</h2>
+  <table>
+    <tr><th>Критерий</th><th>Макс. балл</th></tr>
+    <tr><td>Соответствие заданию</td><td>20</td></tr>
+    <tr><td>Инженерное решение</td><td>25</td></tr>
+    <tr><td>Качество 3D-модели</td><td>20</td></tr>
+    <tr><td>Применимость для БПЛА</td><td>15</td></tr>
+    <tr><td>Защита проекта</td><td>20</td></tr>
+    <tr><th>Итого</th><th>100</th></tr>
+  </table>
+
+  <h2>Награды</h2>
+  <p>Все участники получают сертификат, победители — дипломы конкурса «Первый полёт».</p>
+
+  <!-- МЕСТА ПОД ПРИМЕРЫ СЕРТИФИКАТА И ДИПЛОМА -->
+  <div class="awards">
+    <div class="award">
+      <div class="preview">
+        <img src="sertificat.png" alt="Сертификат">
+      </div>
+      <div class="title">Сертификат участника</div>
+      <div class="sub">Всем, кто сдал работу и прошёл защиту</div>
+    </div>
+    <div class="award">
+      <div class="preview">
+        <!-- Замени на пример диплома: <img src="diploma-example.png" alt="Диплом"> -->
+        <img src="diplom.png" alt="Диплом">
+      </div>
+      <div class="title">Диплом 1–3 места</div>
+      <div class="sub">Победителям конкурса «Первый полёт»</div>
+    </div>
+  </div>
+
+  <h2>Как участвовать</h2>
+  <ol>
+    <li><strong>Зарегистрируйтесь</strong> через форму (кнопка выше или ниже).</li>
+    <li>Разработайте модель в любом 3D-редакторе.</li>
+    <li>Пришлите модель (.STL/.OBJ/.STEP) + описание руководителю «Первого полёта» до 30 ноября.</li>
+    <li>Подготовьте короткую защиту (3–5 минут) на декабрь.</li>
+  </ol>
+
+  <div class="note"><strong>Подробнее:</strong> как проходят этапы, кто оценивает и как подать апелляцию — в <a href="regulations.html">регламенте соревнования</a>.</div>
+
+  <!-- БЛОК РЕГИСТРАЦИИ (повтор) -->
+  <div class="register">
+    <div>
+      <h3>Готовы участвовать?</h3>
+      <p>Регистрация открыта до 30 ноября.</p>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx-p9Al-r-xyfk-CNClhVg_i23q6ph8-rVZd76jj0jbfrIQw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-green">Заполнить форму →</a>
+  </div>
+
+  <a href="regulations.html" class="btn btn-outline">Регламент соревнования →</a>
+  <a href="index.html" class="btn">← На главную</a>
+</article>
+
+<footer>
+  <div class="logo"><span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ</div>
+  <img src="logo.png" alt="" class="footer-logo" onerror="this.style.display='none'">
+  <p>База знаний по БПЛА · 2026</p>
+</footer>
+
+</body>
+</html>
