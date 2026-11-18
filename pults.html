@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Другие пульты: что выбрать для whoop-класса — Первый полёт</title>
+<style>
+  :root{--black:#1A1A1A;--white:#FFF;--green:#00E676;--gray:#F4F4F4;--gray-dark:#666;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter','Montserrat',Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.7;}
+  header{border-bottom:2px solid var(--black);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--white);z-index:10;gap:20px;}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:1px;text-decoration:none;color:var(--black);}
+  .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block;}
+  .brand-logo{height:40px;width:auto;display:block;}
+  nav a{color:var(--black);text-decoration:none;margin-left:24px;font-size:14px;font-weight:600;}
+  nav a:hover{color:var(--green);}
+  .back{display:inline-block;margin:30px 40px 0;color:var(--gray-dark);text-decoration:none;font-size:14px;font-weight:600;}
+  .back:hover{color:var(--green);}
+  article{max-width:760px;margin:20px auto 60px;padding:0 40px;}
+  .tag{display:inline-block;font-size:12px;background:var(--gray);padding:4px 10px;border-radius:12px;color:var(--gray-dark);font-weight:600;margin-bottom:16px;}
+  article h1{font-size:40px;line-height:1.15;font-weight:800;margin-bottom:20px;}
+  article h1::after{content:"";display:block;width:60px;height:4px;background:var(--green);margin-top:16px;}
+  article h2{font-size:26px;font-weight:800;margin:36px 0 12px;}
+  article h3{font-size:20px;font-weight:700;margin:24px 0 10px;}
+  article p{margin-bottom:14px;font-size:17px;}
+  article ul,article ol{margin:0 0 16px 24px;}
+  article li{margin-bottom:8px;font-size:17px;}
+  article code{background:var(--gray);padding:2px 6px;border-radius:4px;font-size:15px;}
+  article blockquote{border-left:4px solid var(--green);padding:10px 18px;background:var(--gray);margin:16px 0;font-style:italic;}
+  .note{border:2px solid var(--black);padding:16px 20px;border-radius:6px;margin:20px 0;background:var(--white);}
+  .note strong{color:var(--green);}
+  table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+  th,td{border:1px solid #DDD;padding:10px 12px;text-align:left;}
+  th{background:var(--black);color:var(--white);font-weight:700;}
+  tr:nth-child(even){background:var(--gray);}
+  footer{border-top:2px solid var(--black);padding:40px;text-align:center;font-size:14px;color:var(--gray-dark);}
+  footer .logo{justify-content:center;margin-bottom:12px;}
+  .footer-logo{height:32px;width:auto;margin:0 auto 10px;display:block;}
+  @media(max-width:600px){article h1{font-size:28px;}header{padding:16px 20px;flex-direction:column;gap:12px;}nav a{margin:0 10px;}article{padding:0 20px;}table{font-size:13px;}th,td{padding:6px 8px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.svg" alt="Первый полёт" class="brand-logo" onerror="this.style.display='none'">
+    <span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ
+  </a>
+  <nav><a href="index.html">Главная</a><a href="index.html#basics">Основы</a><a href="index.html#practice">Практика</a></nav>
+</header>
+
+<a href="index.html" class="back">← Назад на главную</a>
+
+<article>
+  <span class="tag">Аппаратура</span>
+  <h1>Другие пульты: что выбрать для whoop-класса</h1>
+
+  <p>TX12 — не единственный вариант. Для whoop-класса (Meteor 75 PRO и аналоги) подойдёт почти любой современный пульт с поддержкой нужного протокола. Ниже — сравнение популярных моделей и на что смотреть при выборе.</p>
+
+  <h2>1. Что вообще важно для whoop</h2>
+  <ul>
+    <li><strong>Протокол связи</strong> — ELRS, FrSky, Crossfire. Должен совпадать с дроном (или быть модульным).</li>
+    <li><strong>Размер и вес</strong> — для зала удобнее компактный пульт.</li>
+    <li><strong>Питание</strong> — 18650 или встроенный АКБ; зарядка и время работы.</li>
+    <li><strong>Эргономика</strong> — хват, стики, переключатели.</li>
+    <li><strong>Цена</strong> — для новичка не нужно брать топ, но и «самое дешёвое» — риск.</li>
+  </ul>
+
+  <h2>2. Сравнение популярных моделей</h2>
+  <table>
+    <tr>
+      <th>Модель</th>
+      <th>Протокол</th>
+      <th>Питание</th>
+      <th>Плюсы</th>
+      <th>Минусы</th>
+    </tr>
+    <tr>
+      <td><strong>Radiomaster TX12</strong></td>
+      <td>ELRS / Multi</td>
+      <td>2×18650</td>
+      <td>Дёшево, компактно, честно работает</td>
+      <td>Пластик простой, экран базовый</td>
+    </tr>
+    <tr>
+      <td><strong>Radiomaster TX16S</strong></td>
+      <td>Multi / ELRS</td>
+      <td>2×18650</td>
+      <td>Большой экран, много переключателей, OpenTX/EdgeTX</td>
+      <td>Крупный и тяжёлый для зала</td>
+    </tr>
+    <tr>
+      <td><strong>Jumper T-Lite</strong></td>
+      <td>Multi / ELRS</td>
+      <td>2×18650</td>
+      <td>Компактный, дешёвый, удобен для whoop</td>
+      <td>Стики меньше, пластик простой</td>
+    </tr>
+    <tr>
+      <td><strong>Jumper T-Pro</strong></td>
+      <td>ELRS / Multi</td>
+      <td>2×18650</td>
+      <td>Хороший экран, удобные стики</td>
+      <td>Чуть дороже T-Lite</td>
+    </tr>
+    <tr>
+      <td><strong>BetaFPV LiteRadio 3</strong></td>
+      <td>ELRS / FrSky</td>
+      <td>Встроенный АКБ</td>
+      <td>Очень компактный, для новичка</td>
+      <td>Мало настроек, пластик простой</td>
+    </tr>
+  </table>
+
+  <h2>3. Что выбрать новичку</h2>
+  <p>Если бюджет ограничен и нужен пульт «просто летать в зале» — <strong>TX12</strong> или <strong>Jumper T-Lite</strong>. Оба компактные, дешёвые и работают с whoop-классом.</p>
+  <p>Если планируете расти (больше дронов, настройки, экран) — <strong>TX16S</strong> или <strong>T-Pro</strong>. Они тяжелее, но дают запас на будущее.</p>
+
+  <div class="note"><strong>Важно:</strong> перед покупкой проверьте, какой протокол у вашего дрона (ELRS, FrSky, Crossfire). Пульт должен либо поддерживать его «из коробки», либо иметь сменный модуль.</div>
+
+  <h2>4. Протоколы: коротко</h2>
+  <ul>
+    <li><strong>ELRS</strong> — современный, дальний, дешёвый, открытый. Сейчас стандарт для whoop.</li>
+    <li><strong>FrSky</strong> — старый, но всё ещё встречается. Может требовать модуль.</li>
+    <li><strong>Crossfire (TBS)</strong> — надёжный, но дороже. Для whoop — избыточно.</li>
+  </ul>
+
+  <blockquote>Не гонитесь за «топовым» пультом. Для whoop-класса разница между TX12 и TX16S в зале почти не чувствуется — разница в цене и весе.</blockquote>
+
+  <h2>5. Проверка перед полётом</h2>
+  <p>Независимо от модели:</p>
+  <ul>
+    <li>стики в нейтрали;</li>
+    <li>режим <strong>Angle</strong> (не Acro);</li>
+    <li>bind с дроном есть;</li>
+    <li>каналы двигаются правильно (проверить в <code>Channel Monitor</code>);</li>
+    <li>Arm назначен на переключатель.</li>
+  </ul>
+
+  <div class="note"><strong>ТБ:</strong> проверка дрона (arm/disarm, каналы) — только с экспертом и только в полётной зоне. Самостоятельно — запрещено.</div>
+
+  <h2>Итог</h2>
+  <p>Для whoop-класса хватает TX12 или T-Lite. Если планируете расти — TX16S или T-Pro. Главное — протокол совпадает с дроном, режим Angle и проверка каналов перед полётом.</p>
+</article>
+
+<footer>
+  <div class="logo"><span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ</div>
+  <img src="logo-footer.svg" alt="" class="footer-logo" onerror="this.style.display='none'">
+  <p>База знаний по БПЛА · 2026</p>
+</footer>
+
+</body>
+</html>
