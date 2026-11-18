@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Соревнование в Uncrashed — Первый полёт</title>
+<style>
+  :root{--black:#1A1A1A;--white:#FFF;--green:#00E676;--gray:#F4F4F4;--gray-dark:#666;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter','Montserrat',Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.7;}
+  header{border-bottom:2px solid var(--black);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--white);z-index:10;gap:20px;}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:1px;text-decoration:none;color:var(--black);}
+  .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block;}
+  .brand-logo{height:40px;width:auto;display:block;}
+  nav a{color:var(--black);text-decoration:none;margin-left:24px;font-size:14px;font-weight:600;}
+  nav a:hover{color:var(--green);}
+  .back{display:inline-block;margin:30px 40px 0;color:var(--gray-dark);text-decoration:none;font-size:14px;font-weight:600;}
+  .back:hover{color:var(--green);}
+  article{max-width:800px;margin:20px auto 60px;padding:0 40px;}
+  .tag{display:inline-block;font-size:12px;background:var(--black);color:var(--green);padding:4px 12px;border-radius:12px;font-weight:700;margin-bottom:16px;}
+  article h1{font-size:40px;line-height:1.15;font-weight:800;margin-bottom:20px;}
+  article h1::after{content:"";display:block;width:60px;height:4px;background:var(--green);margin-top:16px;}
+  article h2{font-size:26px;font-weight:800;margin:36px 0 12px;}
+  article h3{font-size:20px;font-weight:700;margin:24px 0 10px;}
+  article p{margin-bottom:14px;font-size:17px;}
+  article ul,article ol{margin:0 0 16px 24px;}
+  article li{margin-bottom:8px;font-size:17px;}
+  article code{background:var(--gray);padding:2px 6px;border-radius:4px;font-size:15px;}
+  article blockquote{border-left:4px solid var(--green);padding:10px 18px;background:var(--gray);margin:16px 0;font-style:italic;}
+  .note{border:2px solid var(--black);padding:16px 20px;border-radius:6px;margin:20px 0;background:var(--white);}
+  .note strong{color:var(--green);}
+  .dates{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0;}
+  .date-card{border:2px solid var(--black);padding:16px 20px;border-radius:6px;flex:1 1 180px;}
+  .date-card .label{font-size:12px;color:var(--gray-dark);font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+  .date-card .value{font-size:20px;font-weight:800;margin-top:4px;}
+  .date-card .value span{color:var(--green);}
+  table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+  th,td{border:1px solid #DDD;padding:10px 12px;text-align:left;}
+  th{background:var(--black);color:var(--white);font-weight:700;}
+  tr:nth-child(even){background:var(--gray);}
+  .btn{display:inline-block;background:var(--black);color:var(--white);padding:14px 28px;text-decoration:none;font-weight:700;border-radius:4px;border:2px solid var(--black);transition:all .2s;margin-top:10px;}
+  .btn:hover{background:var(--green);color:var(--black);border-color:var(--green);}
+  .btn-green{background:var(--green);color:var(--black);border-color:var(--green);}
+  .btn-green:hover{background:var(--black);color:var(--white);border-color:var(--black);}
+  .btn-outline{background:transparent;color:var(--black);}
+  .btn-outline:hover{background:var(--black);color:var(--white);}
+  .btn-disabled{background:var(--gray);color:var(--gray-dark);border-color:#CCC;cursor:not-allowed;pointer-events:none;}
+  .steam{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0;}
+  .steam-card{border:2px solid var(--black);border-radius:8px;padding:20px;display:flex;flex-direction:column;}
+  .steam-card .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--green);margin-bottom:6px;}
+  .steam-card h3{font-size:18px;font-weight:800;margin:0 0 8px;}
+  .steam-card p{font-size:14px;color:var(--gray-dark);margin-bottom:14px;flex:1;}
+  .steam-card .btn{font-size:14px;padding:10px 20px;margin-top:0;text-align:center;}
+  .register{background:var(--black);color:var(--white);padding:28px;border-radius:8px;margin:24px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;}
+  .register h3{font-size:20px;font-weight:800;margin:0 0 4px;color:var(--white);}
+  .register p{margin:0;color:#CCC;font-size:15px;}
+  .register .btn-green{margin-top:0;}
+  footer{border-top:2px solid var(--black);padding:40px;text-align:center;font-size:14px;color:var(--gray-dark);}
+  footer .logo{justify-content:center;margin-bottom:12px;}
+  .footer-logo{height:32px;width:auto;margin:0 auto 10px;display:block;}
+  @media(max-width:600px){article h1{font-size:28px;}header{padding:16px 20px;flex-direction:column;gap:12px;}nav a{margin:0 10px;}article{padding:0 20px;}table{font-size:13px;}th,td{padding:6px 8px;}.register{padding:20px;}.steam{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Первый полёт" class="brand-logo" onerror="this.style.display='none'">
+    <span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ
+  </a>
+  <nav><a href="index.html">Главная</a><a href="index.html#articles">Статьи</a><a href="contest.html">3D-конкурс</a></nav>
+</header>
+
+<a href="index.html" class="back">← Назад на главную</a>
+
+<article>
+  <span class="tag">ФЕВРАЛЬ 2027 · UNCRASHED</span>
+  <h1>Соревнование в симуляторе Uncrashed</h1>
+
+  <p>Зимний трек конкурса «Первый полёт» — гонка в симуляторе <strong>Uncrashed</strong> на фиксированной карте и дроне. Формат: каждый проходит трассу на время, результат идёт в общий зачёт. Регистрация откроется ближе к дате.</p>
+
+  <div class="dates">
+    <div class="date-card"><div class="label">Период</div><div class="value"><span>февраль 2027</span></div></div>
+    <div class="date-card"><div class="label">Платформа</div><div class="value"><span>Uncrashed</span></div></div>
+    <div class="date-card"><div class="label">Регистрация</div><div class="value">скоро</div></div>
+  </div>
+
+  <!-- РЕГИСТРАЦИЯ (пока отключена) -->
+  <div class="register">
+    <div>
+      <h3>Регистрация</h3>
+      <p>Откроется ближе к февралю 2027. Следите за обновлениями.</p>
+    </div>
+    <span class="btn btn-disabled">Скоро →</span>
+  </div>
+
+  <h2>Карта и дрон</h2>
+  <p>Соревнование проходит <strong>только</strong> на этих карте и дроне из Steam Workshop. Другие трассы и модели не допускаются.</p>
+
+  <div class="steam">
+    <div class="steam-card">
+      <div class="label">Карта</div>
+      <h3>Трасса соревнования</h3>
+      <p>Steam Workshop. Подпишитесь, чтобы карта появилась в симуляторе.</p>
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3841483915" target="_blank" rel="noopener" class="btn">Открыть в Workshop →</a>
+    </div>
+    <div class="steam-card">
+      <div class="label">Дрон</div>
+      <h3>Модель дрона</h3>
+      <p>Steam Workshop. Подпишитесь, чтобы дрон был доступен в игре.</p>
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3736740194" target="_blank" rel="noopener" class="btn">Открыть в Workshop →</a>
+    </div>
+  </div>
+
+  <div class="note"><strong>Важно:</strong> участвовать нужно строго на этой карте и этом дроне. Другие настройки не засчитываются.</div>
+
+  <h2>Как подготовиться: пошагово</h2>
+  <ol>
+    <li><strong>Купите и установите Uncrashed</strong> в Steam (если ещё нет).</li>
+    <li><strong>Подпишитесь на карту</strong> по ссылке выше — она автоматически скачается в игру.</li>
+    <li><strong>Подпишитесь на дрон</strong> по ссылке выше — он появится в списке доступных.</li>
+    <li><strong>Запустите Uncrashed</strong> и убедитесь, что карта и дрон отображаются в меню.</li>
+    <li><strong>Выберите карту</strong> в разделе карт (по названию из Workshop).</li>
+    <li><strong>Выберите дрон</strong> в разделе моделей (по названию из Workshop).</li>
+    <li><strong>Настройте управление</strong> — стики, режим, частота кадров. Проверьте, что летается комфортно.</li>
+    <li><strong>Пробный полёт</strong> — пройдите трассу 2–3 раза, чтобы привыкнуть.</li>
+    <li><strong>Запись зачёта</strong> — включите запись экрана (OBS, встроенная запись) перед попыткой, чтобы подтвердить результат.</li>
+  </ol>
+
+  <h2>Как проходит зачёт</h2>
+  <ul>
+    <li>Каждый участник проходит трассу <strong>на время</strong>.</li>
+    <li>Попыток — <strong>2</strong> (уточняется в регламенте). В зачёт идёт <strong>лучшее время</strong>.</li>
+    <li>Результат подтверждается <strong>видеозаписью</strong> прохождения (без монтажа, с видимым временем и картой).</li>
+    <li>Видео сдаётся руководителю «Первого полёта» до конца периода соревнования.</li>
+    <li>Победитель — по <strong>наименьшему времени</strong>. При равенстве — по второй попытке.</li>
+  </ul>
+
+  <h2>Требования к записи</h2>
+  <ul>
+    <li>Видео <strong>без монтажа и ускорений</strong> — полное прохождение от старта до финиша.</li>
+    <li>Видно <strong>карту и время</strong> (интерфейс симулятора).</li>
+    <li>Файл в формате .mp4 / .mov, ссылка на облако (Google Drive, Яндекс.Диск) — доступ по ссылке.</li>
+    <li>Если результат вызывает сомнения — могут запросить прохождение повторно.</li>
+  </ul>
+
+  <div class="note"><strong>Честность:</strong> использование сторонних модов, изменение физики дрона или карты — дисквалификация.</div>
+
+  <h2>Критерии оценки</h2>
+  <table>
+    <tr><th>Критерий</th><th>Что учитывается</th></tr>
+    <tr><td>Время прохождения</td><td>Лучшая попытка (основной критерий)</td></tr>
+    <tr><td>Соответствие карте/дрону</td><td>Только утверждённые Workshop-элементы</td></tr>
+    <tr><td>Подтверждение</td><td>Видео без монтажа, видимое время</td></tr>
+    <tr><td>Соблюдение регламента</td><td>Без сторонних модов и изменений</td></tr>
+  </table>
+
+  <h2>Награждение</h2>
+  <ul>
+    <li>Все участники — <strong>сертификат</strong>.</li>
+    <li>Победители (1–3 места) — <strong>дипломы</strong> конкурса «Первый полёт».</li>
+    <li>Лучшее время — отдельная отметка «Лучший пилот Uncrashed».</li>
+  </ul>
+
+  <h2>Частые вопросы</h2>
+  <h3>Нужен ли реальный дрон?</h3>
+  <p>Нет. Соревнование полностью в симуляторе Uncrashed. Достаточно ПК и игры.</p>
+  <h3>Можно ли использовать свой дрон в симуляторе?</h3>
+  <p>Нет. Только утверждённая модель из Workshop по ссылке выше.</p>
+  <h3>Сколько попыток?</h3>
+  <p>Количество уточняется в регламенте перед стартом. В зачёт идёт лучшее время.</p>
+  <h3>Где взять карту и дрон?</h3>
+  <p>По ссылкам в разделе «Карта и дрон». Подписка в Steam Workshop — автоматическая загрузка в игру.</p>
+
+  <div class="register">
+    <div>
+      <h3>Готовы?</h3>
+      <p>Регистрация откроется ближе к февралю 2027.</p>
+    </div>
+    <span class="btn btn-disabled">Скоро →</span>
+  </div>
+
+  <a href="contest.html" class="btn btn-outline">← К 3D-конкурсу</a>
+  <a href="index.html" class="btn">← На главную</a>
+</article>
+
+<footer>
+  <div class="logo"><span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ</div>
+  <img src="logo.png" alt="" class="footer-logo" onerror="this.style.display='none'">
+  <p>База знаний по БПЛА · 2026</p>
+</footer>
+
+</body>
+</html>
