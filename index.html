@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Первый полёт — база знаний по БПЛА</title>
+<style>
+  :root{--black:#1A1A1A;--white:#FFF;--green:#00E676;--gray:#F4F4F4;--gray-dark:#666;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter','Montserrat',Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.6;}
+  header{border-bottom:2px solid var(--black);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--white);z-index:10;gap:20px;}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:1px;text-decoration:none;color:var(--black);}
+  .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block;}
+  .brand-logo{height:40px;width:auto;display:block;}
+  nav a{color:var(--black);text-decoration:none;margin-left:24px;font-size:14px;font-weight:600;border-bottom:2px solid transparent;transition:border-color .2s;}
+  nav a:hover{border-color:var(--green);}
+  .hero{padding:80px 40px 60px;max-width:1100px;margin:0 auto;}
+  .hero h1{font-size:48px;line-height:1.1;font-weight:800;margin-bottom:20px;}
+  .hero h1 span{color:var(--green);}
+  .hero p{font-size:18px;color:var(--gray-dark);max-width:700px;margin-bottom:30px;}
+  .badge{display:inline-block;background:var(--black);color:var(--white);padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:20px;}
+  .badge .dot{color:var(--green);}
+  .btn{display:inline-block;background:var(--black);color:var(--white);padding:14px 28px;text-decoration:none;font-weight:700;border-radius:4px;border:2px solid var(--black);transition:all .2s;}
+  .btn:hover{background:var(--green);color:var(--black);border-color:var(--green);}
+  .btn-outline{background:transparent;color:var(--black);margin-left:12px;}
+  .btn-outline:hover{background:var(--black);color:var(--white);}
+  /* АНОНС */
+  .announce{background:var(--black);color:var(--white);padding:40px;max-width:1100px;margin:0 auto 20px;border-radius:8px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;}
+  .announce h2{font-size:28px;font-weight:800;margin-bottom:8px;}
+  .announce h2 span{color:var(--green);}
+  .announce p{color:#CCC;font-size:15px;max-width:600px;}
+  .announce .btn{background:var(--green);color:var(--black);border-color:var(--green);}
+  .announce .btn:hover{background:var(--white);border-color:var(--white);}
+  section{max-width:1100px;margin:0 auto;padding:60px 40px;}
+  section h2{font-size:32px;font-weight:800;margin-bottom:10px;}
+  section h2::after{content:"";display:block;width:60px;height:4px;background:var(--green);margin-top:10px;}
+  .article-list{margin-top:30px;}
+  .article-item{border-bottom:1px solid #E0E0E0;padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+  .article-item a{color:var(--black);text-decoration:none;font-weight:600;font-size:16px;}
+  .article-item a:hover{color:var(--green);}
+  .tag{font-size:12px;background:var(--gray);padding:4px 10px;border-radius:12px;color:var(--gray-dark);font-weight:600;white-space:nowrap;}
+  .sponsors{border-top:2px solid var(--black);border-bottom:2px solid var(--black);background:var(--gray);}
+  .sponsors-inner{max-width:1100px;margin:0 auto;padding:40px;text-align:center;}
+  .sponsors h2{font-size:24px;font-weight:800;margin-bottom:20px;}
+  .sponsor-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px;}
+  .sponsor-logo{width:140px;height:60px;border:2px dashed #BBB;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#999;font-size:12px;background:var(--white);}
+  footer{border-top:2px solid var(--black);padding:40px;text-align:center;font-size:14px;color:var(--gray-dark);}
+  footer .logo{justify-content:center;margin-bottom:12px;}
+  .footer-logo{height:32px;width:auto;margin:0 auto 10px;display:block;}
+  @media(max-width:600px){.hero h1{font-size:32px;}header{padding:16px 20px;flex-direction:column;gap:12px;}nav a{margin:0 10px;}section{padding:40px 20px;}.announce{padding:30px 20px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Первый полёт" class="brand-logo" onerror="this.style.display='none'">
+    <span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ
+  </a>
+  <nav>
+    <a href="index.html#articles">Статьи</a>
+    <a href="contest.html">Соревнование</a>
+    <a href="index.html#sponsors">Партнёры</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="badge"><span class="dot">●</span> база знаний по БПЛА</div>
+  <h1>Первый полёт <span>начинается здесь</span></h1>
+  <p>Документация, гайды и разборы по пультам и дронам — по-человечески, без лишней теории.</p>
+  <a href="#articles" class="btn">К статьям</a>
+  <a href="contest.html" class="btn btn-outline">Соревнование в декабре</a>
+</div>
+
+<!-- АНОНС СОРЕВНОВАНИЯ -->
+<div class="announce">
+  <div>
+    <h2>Декабрь: <span>3D-моделирование и 3D-печать</span></h2>
+    <p>Конкурс «Первый полёт» объявляет зимний модуль — инженерный вызов. Задача: приспособление для мягкой и удобной посадки дрона. Приём работ — до конца ноября.</p>
+  </div>
+  <a href="contest.html" class="btn">Подробнее →</a>
+</div>
+
+<!-- СТАТЬИ (только реальные) -->
+<section id="articles">
+  <h2>Статьи</h2>
+  <div class="article-list">
+    <div class="article-item"><a href="tx12.html">Radiomaster TX12: настройка для Meteor 75 PRO</a><span class="tag">Аппаратура</span></div>
+    <div class="article-item"><a href="pults.html">Другие пульты: что выбрать для whoop-класса</a><span class="tag">Аппаратура</span></div>
+    <div class="article-item"><a href="regulations.html">Инженерный вызов</a><span class="tag">Соревнования</span></div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="logo"><span class="logo-dot"></span>ПЕРВЫЙ ПОЛЁТ</div>
+  <img src="logo.png" alt="" class="footer-logo" onerror="this.style.display='none'">
+  <p>База знаний по БПЛА · 2026</p>
+  <p style="margin-top:8px;font-size:12px;">Взлёт разрешён.</p>
+</footer>
+
+</body>
+</html>
